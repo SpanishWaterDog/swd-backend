@@ -1,0 +1,9 @@
+{
+  "name": "swd-backend",
+  "version": "1.0.0",
+  "description": "SWD Project backend",
+  "main": "index.js",
+  "repository": "https://github.com/SpanishWaterDog/swd-backend.git",
+  "author": "SWD Team <swd.develop@gmail.com>",
+  "license": "UNLICENSED"
+}
