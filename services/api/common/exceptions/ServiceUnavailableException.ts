@@ -1,4 +1,4 @@
-import { ApplicationException } from '@common/exceptions/ApplicationException';
+import { ApplicationException } from './ApplicationException';
 
 export class ServiceUnavailableException extends ApplicationException {
   public constructor(public message: string = 'Service Unavailable') {

@@ -1,7 +1,7 @@
-import { PaginationRequest } from '@common/application/Pagination';
-import { Search } from '@common/application/Search';
-import { Sort } from '@common/application/Sort';
-import { Token } from '@common/application/Token';
+import { PaginationRequest } from '../application/Pagination';
+import { Search } from '../application/Search';
+import { Sort } from '../application/Sort';
+import { Token } from '../application/Token';
 import { APIGatewayProxyEvent, APIGatewayProxyEventPathParameters, APIGatewayProxyEventQueryStringParameters } from 'aws-lambda';
 import { APIGatewayProxyEventHeaders } from 'aws-lambda/trigger/api-gateway-proxy';
 import _ from 'lodash';

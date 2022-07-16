@@ -1,4 +1,4 @@
-import { ApplicationException } from '@common/exceptions/ApplicationException';
+import { ApplicationException } from './ApplicationException';
 
 export class ConflictException extends ApplicationException {
   public constructor(public message: string = 'Resource already exists') {
