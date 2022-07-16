@@ -1,0 +1,40 @@
+service: test-api
+frameworkVersion: '3'
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-tscpaths
+
+custom:
+  cors:
+    origin: '*'
+    headers:
+      - authorization
+      - Content-Type
+      - X-Amz-Date
+      - Authorization
+      - X-Api-Key
+      - X-Amz-Security-Token
+      - X-Amz-User-Agent
+    allowCredentials: false
+
+provider:
+  name: aws
+  stage: dev
+  runtime: nodejs16.x
+  region: 'eu-west-3'
+  deploymentBucket:
+    blockPublicAccess: true
+  logs:
+    restApi: true
+
+package:
+  excludeDevDependencies: true
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - httpApi:
+          path: /
+          method: get

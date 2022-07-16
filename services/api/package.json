@@ -1,0 +1,10 @@
+{
+  "name": "services",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "serverless-plugin-typescript": "^2.1.2",
+    "serverless-tscpaths": "^0.0.7"
+  }
+}

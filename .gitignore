@@ -1,2 +1,35 @@
-.idea
-node_modules
+# logs
+**/logs
+**/*.log
+
+# package directories
+**/node_modules
+**/jspm_packages
+# We don't use npm anymore
+**/package-lock.json
+# yarn
+**/.yarn/*
+!**/.yarn/patches
+!**/.yarn/plugins
+!**/.yarn/releases
+!**/.yarn/sdks
+!**/.yarn/versions
+
+# IDE
+**/.vscode
+**/.idea
+!/.idea/runConfigurations/*
+!/.idea/codeStyles/*
+!/.idea/jsLinters/*
+**/.vs/*
+**/.DS_Store
+**/nb
+
+# tsc out
+**/out
+**/build
+**/dist
+
+# Serverless directories
+.build
+.serverless
