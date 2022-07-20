@@ -4,8 +4,14 @@ frameworkVersion: '3'
 plugins:
   - serverless-plugin-typescript
   - serverless-tscpaths
+  - serverless-prune-plugin
 
 custom:
+  tscpaths:
+    tscpathsPath: ../../node_modules/@baemingo/tscpaths-async
+  prune:
+    automatic: true
+    number: 2
   cors:
     origin: '*'
     headers:
@@ -32,9 +38,9 @@ package:
   excludeDevDependencies: true
 
 functions:
-  hello:
-    handler: handler.hello
+  exercises_getExercise:
+    handler: src/exercises/controller/getExercise/handler.default
     events:
-      - httpApi:
-          path: /
+      - http:
+          path: exercises/{id}
           method: get

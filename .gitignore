@@ -5,9 +5,7 @@
 # package directories
 **/node_modules
 **/jspm_packages
-# We don't use npm anymore
 **/package-lock.json
-# yarn
 **/.yarn/*
 !**/.yarn/patches
 !**/.yarn/plugins
@@ -33,3 +31,4 @@
 # Serverless directories
 .build
 .serverless
+
