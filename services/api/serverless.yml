@@ -9,6 +9,7 @@ plugins:
 custom:
   tscpaths:
     tscpathsPath: ../../node_modules/@baemingo/tscpaths-async
+  envConfig: ${file(./config/${opt:stage}.config.json)}
   prune:
     automatic: true
     number: 2
@@ -29,6 +30,8 @@ provider:
   stage: dev
   runtime: nodejs16.x
   region: 'eu-west-3'
+  environment:
+    LOG_LEVEL: ${self:custom.envConfig.logLevel}
   deploymentBucket:
     blockPublicAccess: true
   logs:

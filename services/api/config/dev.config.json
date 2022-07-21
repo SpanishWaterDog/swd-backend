@@ -1,4 +1,5 @@
 {
   "userPool": "swd-dev-pool",
-  "userPoolId": "eu-west-3_WbJNPOjGu"
+  "userPoolId": "eu-west-3_WbJNPOjGu",
+  "logLevel": "debug"
 }

@@ -17,7 +17,7 @@ export default {
   // cacheDirectory: "/private/var/folders/p_/3szyvn6x1mn0jt91mknxcdj80000gn/T/jest_dx",
 
   // Automatically clear mock calls, instances, contexts and results before every test
-  clearMocks: true,
+  // clearMocks: true,
 
   // Indicates whether the coverage information should be collected while executing the test
   // collectCoverage: false,
@@ -109,7 +109,7 @@ export default {
   preset: 'ts-jest',
 
   // Run tests from one or more projects
-  projects: ['<rootDir>', '../../'],
+  // projects: ['<rootDir>', '../../'],
 
   // Use this configuration option to add custom reporters to Jest
   // reporters: undefined,
@@ -150,7 +150,7 @@ export default {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  // testEnvironment: "jest-environment-node",
+  testEnvironment: "jest-environment-node",
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -180,11 +180,14 @@ export default {
 
   // A map from regular expressions to paths to transformers
   transform: {
-    '^.+\\.ts?$': 'ts-jest',
+    '^.+\\.ts?$': 'ts-jest'
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
-  transformIgnorePatterns: ['/node_modules/', '\\.pnp\\.[^\\/]+$'],
+  transformIgnorePatterns: [
+    "/node_modules/",
+    "\\.pnp\\.[^\\/]+$"
+  ],
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
   // unmockedModulePathPatterns: undefined,
