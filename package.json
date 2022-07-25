@@ -6,9 +6,6 @@
   "repository": "https://github.com/SpanishWaterDog/swd-backend.git",
   "author": "SWD Team <swd.develop@gmail.com>",
   "license": "UNLICENSED",
-  "scripts": {
-    "test": "./node_modules/.bin/dotenv -e .env.test jest"
-  },
   "workspaces": ["libs/*", "services/*"],
   "private": true
 }
