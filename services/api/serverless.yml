@@ -2,13 +2,14 @@ service: test-api
 frameworkVersion: '3'
 
 plugins:
-  - serverless-plugin-typescript
-  - serverless-tscpaths
+#  - serverless-plugin-typescript
+#  - serverless-tscpaths
   - serverless-prune-plugin
+  - serverless-plugin-monorepo
 
 custom:
-  tscpaths:
-    tscpathsPath: ../../node_modules/@baemingo/tscpaths-async
+#  tscpaths:
+#    tscpathsPath: ../../node_modules/@baemingo/tscpaths-async
   envConfig: ${file(./config/${opt:stage}.config.json)}
   prune:
     automatic: true
@@ -42,7 +43,7 @@ package:
 
 functions:
   exercises_getExercise:
-    handler: src/exercises/controller/getExercise/handler.default
+    handler: dist/exercises/controller/getExercise/handler.default
     events:
       - http:
           path: exercises/{id}
