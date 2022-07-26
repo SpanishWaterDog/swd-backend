@@ -1,5 +1,9 @@
 {
   "userPool": "swd-dev-pool",
   "userPoolId": "eu-west-3_WbJNPOjGu",
-  "logLevel": "debug"
+  "logLevel": "debug",
+  "vpc": {
+    "securityGroupIds": ["sg-01dc95a5834254aaa"],
+    "subnetIds": ["subnet-08ba9912b6d75f306", "subnet-088218fb1a3c35b99", "subnet-04cbab5d8403d999d"]
+  }
 }

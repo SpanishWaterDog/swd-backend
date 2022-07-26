@@ -6,6 +6,7 @@ plugins:
 #  - serverless-tscpaths
   - serverless-prune-plugin
   - serverless-plugin-monorepo
+  - serverless-dotenv-plugin
 
 custom:
 #  tscpaths:
@@ -37,6 +38,7 @@ provider:
     blockPublicAccess: true
   logs:
     restApi: true
+  vpc: ${self:custom.envConfig.vpc}
 
 package:
   excludeDevDependencies: true
