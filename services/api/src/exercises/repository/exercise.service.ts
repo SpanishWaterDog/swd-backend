@@ -8,4 +8,8 @@ export default class ExerciseService {
       },
     });
   }
+
+  static async getAllExercises(prisma: PrismaClient): Promise<Exercise[]> {
+    return await prisma.exercise.findMany();
+  }
 }

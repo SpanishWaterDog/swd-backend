@@ -17,4 +17,9 @@ describe('exercises/controller/getExercise/handler.ts', () => {
     expect(result.statusCode).toBe(200);
     expect(body.id).toBe(exercise.id);
   });
+
+  it('should return status 404 if exercise does not exist', async () => {
+    const result = await getExercise(createRequest(null, null, { id: 'not-existing-exercise' }), context);
+    expect(result.statusCode).toBe(404);
+  });
 });
