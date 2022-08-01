@@ -38,6 +38,11 @@ provider:
 
 package:
   excludeDevDependencies: true
+  patterns:
+    - '!node_modules/.prisma/client/libquery_engine-*'
+    - 'node_modules/.prisma/client/libquery_engine-rhel-*'
+    - '!node_modules/prisma/libquery_engine-*'
+    - '!node_modules/@prisma/engines/**'
 
 functions:
   exercises_getExercise:
@@ -50,5 +55,5 @@ functions:
     handler: dist/exercises/controller/getExercises/handler.default
     events:
       - http:
-          path: exercises/{id}
+          path: exercises
           method: get

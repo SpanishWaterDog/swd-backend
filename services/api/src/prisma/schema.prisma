@@ -12,5 +12,4 @@ model Exercise {
   id          String @id @default(uuid())
   name        String
   description String
-  s3Path      String
 }

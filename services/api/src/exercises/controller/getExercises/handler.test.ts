@@ -1,6 +1,5 @@
 import { clearDb } from '@common/controller-test/clearDb';
 import { createExercise } from '@common/controller-test/entities/createExercise';
-import getExercise from '@src/exercises/controller/getExercise/handler';
 import { createRequest } from '@common/controller-test/createRequest';
 import { context } from '@common/controller-test/lambdaContextMock';
 import { Exercise } from '@prisma/client';
@@ -10,8 +9,8 @@ describe('exercises/controller/getExercises/handler.ts', () => {
   beforeEach(async () => {
     await clearDb();
 
-    await createExercise('1', 'testExercise1', 'description', 's3-path');
-    await createExercise('2', 'testExercise2', 'description', 's3-path');
+    await createExercise('1', 'testExercise1', 'description');
+    await createExercise('2', 'testExercise2', 'description');
   });
 
   it('should return all exercises', async () => {
